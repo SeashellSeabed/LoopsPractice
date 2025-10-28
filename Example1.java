@@ -9,15 +9,15 @@ public class Example1{
 
     public static int countFactors(int integer){
         //return the number of factors in the number
-        int count = 0;
-        int factors = 0;
+        int count = 0; //counter
+        int factors = 0; //the amount of factors there is
         while(count <= integer){
-            if( count != 0 && integer % count == 0){
-                factors++;
+            if( count != 0 && integer % count == 0){ //makes sure not to divide by 0 before checking if mod is 0.
+                factors++; //when mod is 0 that is a factor so add 1
             }
-            count++;
+            count++; //always make counter go up to work
         }
-        return factors;
+        return factors; //returns after while loop finishes
     }
 
     public static boolean isPrime(int integer){
@@ -49,7 +49,7 @@ public class Example1{
 
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter an integer: ");
-        int integer = scan.nextInt();
+        int integer = scan.nextInt(); 
         System.out.println("The number of factors in " + integer + " is " + countFactors(integer));
         if(isPrime(integer)){
             System.out.println(integer + " is a prime number.");
