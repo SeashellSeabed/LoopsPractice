@@ -21,6 +21,7 @@ public class Example1{
     }
 
     public static boolean isPrime(int integer){
+        // i made this way too complicated I forgot I can just use the countFactors method and check to see if there's only 2 factors in which it would be prime (with the exception of zero and one) otherwise it wouldn't be prime so false
         int limit = (int)Math.sqrt(integer); //sqrt of the number
         if(integer <= 1){
             return false; // cuz 0 and 1 aren't prime
@@ -32,7 +33,7 @@ public class Example1{
        }
         if(integer % 2 == 0){
 
-             return false; // every even number that isn't 2 is prime
+             return false; // every even number that isn't 2 isn't prime
         } 
         for(int i = 3; i <= limit; i += 2){ // go through odd numbers, evens are not prime (with exception of 2 but i already did that)
             if(integer % i == 0) return false;
